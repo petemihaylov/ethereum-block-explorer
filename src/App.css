@@ -1,0 +1,60 @@
+:root {
+  --main-bg-color: #1e1e1e;
+  --secondary-bg-color: #282828;
+  --text-color: #d0d0d0;
+  --active-color: #bb86fc;
+  --border-radius: 4px;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  background-color: var(--main-bg-color);
+  color: var(--text-color);
+}
+
+.intro {
+  border-radius: var(--border-radius);
+  padding: 50px;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  max-width: 200px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  padding: 10px;
+}
+
+.accounts {
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.transactions {
+  padding: 10px;
+}
+
+input {
+  width: 330px;
+}
+/* More Info */
+.more-info {
+  border-radius: var(--border-radius);
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.more-info div {
+  margin-bottom: 5px;
+}
+
+.more-info div:first-of-type {
+  font-weight: bold;
+}
+
+.more-info div:last-of-type {
+  font-style: italic;
+  color: #666;
+}
