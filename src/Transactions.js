@@ -4,8 +4,6 @@ import { useState } from "react";
 import MoreInfo from "./MoreInfo";
 
 export const Transactions = (props) => {
-  let i = 0;
-
   const settings = {
     apiKey: process.env.REACT_APP_ALCHEMY_API_KEY,
     network: Network.ETH_MAINNET,

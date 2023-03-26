@@ -13,8 +13,6 @@ export const Accounts = () => {
   let [balance, setBalance] = useState(null);
   let [userAddress, setUserAddress] = useState("");
   let [showBalance, setShowBalance] = useState(false);
-  let [showNFTs, setShowNFTs] = useState(false);
-  let [ownedNFTs, setOwnedNFTs] = useState(null);
 
   async function getBalance(address) {
     try {
@@ -25,21 +23,6 @@ export const Accounts = () => {
     } catch {
       alert("Error. This wallet probably doesn't exist.");
       setShowBalance(false);
-      setShowNFTs(false);
-    }
-  }
-
-  async function getNFTs(address) {
-    try {
-      let response = await alchemy.nft.getNftsForOwner(address);
-      console.log(response);
-      setOwnedNFTs(response.totalCount);
-      if (showNFTs === true) return;
-      else setShowNFTs(!showNFTs);
-    } catch {
-      alert("Error. This wallet probably doesn't exist.");
-      setShowBalance(false);
-      setShowNFTs(false);
     }
   }
 
